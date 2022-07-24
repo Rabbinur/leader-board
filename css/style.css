@@ -197,13 +197,35 @@ media query
         grid-template-columns: repeat(1, 1fr);
     }
 
-    .player,
+    .players,
     .blogs,
     .course {
+        flex-direction: column;
+
+
+    }
+
+    .player,
+    .blog,
+    .courses {
+        align-items: center;
         flex-direction: column;
     }
 
 
 
 
+}
+
+/* tablet devices */
+@media only screen and (min-width:689px) and (max-width:991px) {
+    .container {
+        width: 100%;
+    }
+
+    .players,
+    .blogs,
+    .course {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
